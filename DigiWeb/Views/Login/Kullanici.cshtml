@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "Kullanıcı Giriş";
+}
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href="~/Content/Yregister.css" rel="stylesheet" />
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="text-center" style="padding:50px">
+            <div class="logo">Kiracı / Mülk Sahibi Giriş</div>
+            <div class="login-form-1">
+                <form id="login-form" class="text-left">
+                    <div class="login-form-main-message"></div>
+                    <div class="main-login-form">
+                        <div class="login-group">
+                            <div class="form-group">
+                                <br />
+                                <input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="E-posta veya Telefon">
+                            </div>
+
+                            <br />
+                            <div class="form-group">
+
+                                <input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="Parola">
+                            </div>
+                            <br />
+                            <div class="form-group login-group-checkbox">
+                                <input type="checkbox" id="lg_remember" name="lg_remember">
+                                <label for="lg_remember">Beni Hatırla</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+                    </div>
+                    <div class="etc-login-form">
+                        <p>Şifrenizi Unuttuysanız <a onclick="sifirlama()" href="#">Tıklayın</a></p>
+                        <p>Kaydolmak İçin <a href="/Login/Kaydol">Tıklayın</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="at" style="display:none" class="col-sm-6">
+
+        <div class="text-center" style="padding:50px">
+            <div class="logo">Şifre Sıfırlama</div>
+            <div class="login-form-1">
+                <form id="forgot-password-form" class="text-left">
+                    <div class="etc-login-form">
+                        <p>Şifrenizi unuttuysanız, şifre sıfırlama linki göndermemiz için Email adresinizi giriniz.</p>
+                    </div>
+                    <div class="login-form-main-message"></div>
+                    <div class="main-login-form">
+                        <div class="login-group">
+                            <div class="form-group">
+
+
+                                <input type="email" class="form-control" id="fp_email" name="fp_email" placeholder="ornek@mail.com">
+                            </div>
+                        </div>
+                        <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+                    </div>
+                    <div class="etc-login-form">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    function sifirlama() {
+        document.getElementById("at").setAttribute('style', 'display:block;');
+    }
+
+</script>
+
+<script src="~/Scripts/YLogin.js"></script>
+
